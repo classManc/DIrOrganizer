@@ -17,20 +17,18 @@ def dir_organizer(dir_path):
             if file_extension in ['.txt', '.csv', '.log', ',py']: # check if the element extension gotten from above is in the list
                 document_folder = os.path.join(dir_path, 'document') # if it is, join the path of the directory with the string "document"
                 os.makedirs(document_folder, exist_ok=True) # create a new folder called document with the path from above
-                destination_file = os.path.join(document_folder, content) # join the path of the ddocumment folder to the name of the current file in the loop
-                shutil.move(content, destination_file) # move the file to the document folder
+                shutil.move(content, os.path.join(dir_path, document_folder)) # move the file to the document folder
             
             elif file_extension in ['.mp4', '.avi', '.mkv']:
                 video_folder = os.path.join(dir_path, 'videos')
                 os.makedirs(video_folder, exist_ok=True)
-                destination_file = os.path.join(video_folder, content)
-                shutil.move(content, destination_file)
+                shutil.move(content, os.path.join(dir_path, video_folder))
 
             elif file_extension in ['.jpg', '.jpeg', '.png', '.gif', '.bmp']:
                 image_folder = os.path.join(dir_path, 'image')
                 os.makedirs(image_folder, exist_ok=True)
-                destination_file = os.path.join(image_folder, content)
-                shutil.move(content, destination_file)
+                shutil.move(content, os.path.join(dir_path, video_folder))
+                
             else:
                 pass
         else:
