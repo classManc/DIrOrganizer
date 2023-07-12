@@ -8,10 +8,10 @@ it is a function that accept a full path of the directory you want to organize a
 
 
 
-## Deployment
+## Running this script
 
-To deploy this project run
+To run this script input the below on the terminal
 
 ```bash
-  python3 file_organizer '/Users/ajakayejoseph/Desktop/testing'
+  python3 file_organizer '/Users/ajakayejoseph/Desktop/<name of the folder you want to organize>'
 ```
